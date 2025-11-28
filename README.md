@@ -4,7 +4,7 @@
 ![按钮部分接线图](https://github.com/wahtcanisay/stm32-HAL-SPITest/blob/main/%E6%8C%89%E9%92%AE%E9%83%A8%E5%88%86%E6%8E%A5%E7%BA%BF%E5%9B%BE.png)  
 ![flash部分接线图](https://github.com/wahtcanisay/stm32-HAL-SPITest/blob/main/flash%E9%83%A8%E5%88%86%E6%8E%A5%E7%BA%BF%E5%9B%BE.png)
 ![flash内部地址图](https://github.com/wahtcanisay/stm32-HAL-SPITest/blob/main/flash%E5%86%85%E9%83%A8%E5%9C%B0%E5%9D%80%E5%9B%BE.png)
-向flash写入数据之前要进行擦除，擦除最小单元是扇区(4kzi字节)   
+向flash写入数据之前要进行擦除，擦除最小单元是扇区(4k字节)   
 写入数据的最小单元是页(256字节)，称为页编程  
 每次进行擦除和页变成之前要对芯片进行解锁，称为写使能  
 ## 软件实现
@@ -63,7 +63,7 @@ HAL_StatusTypeDef HAL_SPI_TransmitReceive(SPI_HandleTypeDef *hspi,
 *pTxData：发送数据地址  
 *pRxData：接收数据缓冲区地址  
 Size：收发数据数量
-Timeout：超时时间
+Timeout：超时时间  
 ***注：SPI是收发双向总线，接收和发送的字节数量必须相同***  
 
   
